@@ -1,0 +1,12 @@
+<!-- <tag-input [(ngModel)]='item' theme='bootstrap' [separatorKeyCodes]="[32]"></tag-input> -->
+<h1 id="heading">Welcome to Ice-Cream Corner</h1> 
+<br><br>
+<tag-input id="menu" [ngModel]="[]"
+           [onlyFromAutocomplete]="true"  theme='bootstrap'>
+    <tag-input-dropdown [showDropdownIfEmpty]="true"
+                        [autocompleteItems]="['Vanilla', 'Strobbery', 'Blackcurrent', 'Blue Velevt','Chocolate']">
+        <ng-template let-item="item" let-index="index">
+            {{ index }}: {{ item.display }}
+        </ng-template>
+    </tag-input-dropdown>
+</tag-input>
